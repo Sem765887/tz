@@ -16,3 +16,16 @@ function appendOperator(operator) {
         display.value += operator;
     }
 }
+
+function clearDisplay() {
+    display.value = "";
+}
+
+function changeSign() {
+    try {
+        const result = eval(display.value) * -1;
+        display.value = result;
+    } catch (e) {
+        display.value = "Ошибка";
+    }
+}
