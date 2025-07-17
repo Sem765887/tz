@@ -29,3 +29,12 @@ function changeSign() {
         display.value = "Ошибка";
     }
 }
+
+function calculate() {
+    try {
+        const result = eval(display.value.replace(/[^-()\d/*+.]/g, ""));
+        display.value = parseFloat(result.toFixed(10)).toString();
+    } catch (e) {
+        display.value = "Ошибка";
+    }
+}
